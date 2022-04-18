@@ -11,9 +11,9 @@
 :root[color-mode="light"] {
     --color-background: #F2F2F2;
     --color-default: #262626;
-    --color-accent-1: #89a1c4;
+    --color-accent-1: #4b7bc4;
     --color-accent-2: dimgrey;
-    --color-accent-3: #6c85ab;
+    --color-accent-3: #385e96;
     --border-color: #3A3A3A;
 }
 
