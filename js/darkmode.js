@@ -2,16 +2,26 @@
 
 let darkmodetoggle = document.getElementById("DarkModeToggle");
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (localStorage.lightMode === null) {
+        localStorage.lightMode = "dark";
+        console.log("localstorage lightMode on load", localStorage.lightMode);
+    }
+});
+
 // on button click change color mode
 darkmodetoggle.addEventListener("click", function () {
-    let current_mode = document.documentElement.getAttribute("color-mode");
+    console.log("localstorage lightMode on click", localStorage.lightMode)
     if (localStorage.lightMode === "dark"){
-        localStorage.lightMode = "light";
         document.documentElement.setAttribute("color-mode", "light");
+        localStorage.lightMode = "light";
+        console.log("localstorage lightMode after if", localStorage.lightMode)
     }
     else {
-        localStorage.lightMode = "dark";
         document.documentElement.setAttribute("color-mode", "dark");
+        localStorage.lightMode = "dark";
+        console.log("localstorage lightMode after else", localStorage.lightMode)
     }
 
 });
