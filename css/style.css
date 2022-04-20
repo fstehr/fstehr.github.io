@@ -17,6 +17,7 @@
     --border-color: #3A3A3A;
 }
 
+/* style main elements */
 body {
     color:var(--color-default);
     background-color:var(--color-background);
@@ -30,6 +31,7 @@ section{
     max-width: 900px;
     margin: auto;
 }
+
 
 div{
     margin: auto;
@@ -52,6 +54,22 @@ header{
 }
 
 
+/* style darkmode button */
+.dark-mode-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.icon-btn {
+    background-color: var(--color-background);
+    height: 32px;
+    width: 32px;
+    margin: 8px 8px;
+    cursor: pointer;
+}
+
 
 /* Style the navigation menu */
 .sticky-wrapper {
@@ -67,6 +85,8 @@ header{
     width: 80%;
     background-color: var(--color-background);
     overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Navigation links */
@@ -87,19 +107,9 @@ header{
     color: var(--color-default);
 }
 
-/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left; /* If you want the text to be left-aligned on small screens */
-  }
-}
-
 .row {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 /* style text in two columns */
@@ -114,8 +124,6 @@ header{
     display: table;
     clear: both;
 }
-
-
 
 /* Style main text elements */
 h1, h2, h3, h4, h5, h6 {
@@ -148,6 +156,35 @@ p {
     color: var(--color-default);
 }
 
+/* style first paragraph on website in mobile compatible way */
+.bio {
+    margin-top: 5%;
+}
+
+.contacts{
+    margin-top: 10%;
+}
+
+/* style other paragraph elements */
+.papertitle{
+    font-style: italic;
+}
+
+.coauthors {
+    color: var(--color-accent-2);
+    font-size: 10.5pt;
+    margin-top: 0;
+}
+
+.abstract {
+    font-size: 10.5pt;
+    color: var(--color-accent-2);
+    margin-top: 0;
+    margin-left: 10%;
+
+}
+
+
 ul, li {
     margin: 0;
     padding: 0;
@@ -166,15 +203,6 @@ img {
     vertical-align: middle;
 }
 
-
-.text-block {
-    bottom: 50px;
-    display: block;
-    width: 740px;
-    padding-bottom:10px;
-}
-
-
 a{
     text-decoration: none;
     color: var(--color-accent-1);
@@ -183,24 +211,6 @@ a{
 a:hover{
     text-decoration: none;
     color: var(--color-accent-3);
-}
-
-
-
-/* style darkmode button */
-.dark-mode-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
-}
-
-.icon-btn {
-    background-color: var(--color-background);
-    height: 32px;
-    width: 32px;
-    margin: 8px 8px;
-    cursor: pointer;
 }
 
 
@@ -217,83 +227,116 @@ a:hover{
     transform: translate(-50%, 0);
 }
 
-#section {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.papertitle{
-    font-style: italic;
-}
-.coauthors {
-    color: var(--color-accent-2);
-    font-size: 10.5pt;
-    margin-top: 0;
-}
-
-.abstract {
-    font-size: 10.5pt;
-    color: var(--color-accent-2);
-    margin-top: 0;
-    margin-left: 10%;
-
-}
-
 #disclaimer {
     text-align: right;
     font-size: 10pt;
 }
 
+/* style div section element */
+#section {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 
+
+
+/* mobile styles */
 @media all and (max-width: 800px){
-    div{
-       margin-left: 5%;
-       margin-right: 5%;
+    div {
+       margin-left: 2.5%;
+       margin-right: 2.5%;
     }
 
-    .text-block{
-        width: 90%;
-        height:auto;
+    header {
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    .dark-mode-toggle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sticky-wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar {
+        width: 95%;
+        background-color: var(--color-background);
+        overflow: auto;
+    }
+
+    .navbar a {
+        width: 25%;
+        text-align: center;
+        font-size: 10pt;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* change order of picture and text by making row a flex item and reversing the column orders */
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;  /* revert vertically */
+    }
+
+    /* remove columns on about page by making them 100% wide */
+    .column {
+        width: 100%;
+    }
+
+    .img-container {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7%;
+    }
+
     img {
-        float: center;
-        width: 80%;
-        clear: both;
-        height:auto;
-        margin-left: 10%;
-        margin-right: 10%;
-        display: block;
-        max-width: 275px;
+        object-fit: cover;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         vertical-align: middle;
     }
 
-    div.show {
-        display: none;
+    p {
+        font-size: 11.8pt;
+        line-height: 1.4;
     }
 
-    div.hide{
-        display: block;
+    .bio {
+        margin-top: 0;
     }
 
-    .empty{
-        height: 200px;
-    }
-
-    .emptysmall{
-        height: 20px;
-    }
-
-    .header{
-        height: 200px;
-    }
-
-    .empty2{
-        height: 120px;
+    .footer {
+        position: relative;
+        margin-top: 50px;
     }
 
 }
 
+@media all and (max-width: 900px) {
+    .navbar a {
+        width: 25%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
+
+
+/* for large screens */
 @media all and  (min-width: 1700px){
     body{
         font-size:16px;
@@ -307,7 +350,6 @@ a:hover{
         font-size:25px;
     }
 
-
     header{
         font-size: 20px;
         height: 260px;
@@ -316,21 +358,6 @@ a:hover{
     div{
         max-width:1000px;
     }
-
-    .empty{
-        height: 250px;
-    }
-
-    p.ex2{
-        max-width:1000px;
-    }
-
-
-    .text-block {
-        width: 900px;
-        height: 420px;
-    }
-
 
     img {
         width: 300px;
