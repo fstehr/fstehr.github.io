@@ -190,6 +190,9 @@ p {
 
 }
 
+.placeholder {
+    margin-bottom: 150px;
+}
 
 ul, li {
     margin: 0;
