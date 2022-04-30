@@ -176,6 +176,12 @@ p {
     margin-top: 0;
 }
 
+.link {
+    font-size: 10.5pt;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
 .abstract {
     font-size: 10.5pt;
     color: var(--color-accent-2);
