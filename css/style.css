@@ -1,8 +1,8 @@
 /* set color scheme */
 :root[color-mode="dark"] {
-    --color-background: #262626;
+    --color-background: #22252b; /*#262626*/
     --color-default: #cccccc;
-    --color-accent-1: #89a1c4;
+    --color-accent-1: #6695dc; /* #89a1c4*/
     --color-accent-2: #989ea6;
     --color-accent-3: #6c85ab;
     --border-color: #e6e9eb;
@@ -21,7 +21,7 @@
 body {
     color:var(--color-default);
     background-color:var(--color-background);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* InaiMathi */
     font-size: 13px;
 }
 
@@ -50,7 +50,6 @@ header{
     text-align: center;
     left: 0;
     top:  0;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -127,7 +126,7 @@ header{
 
 /* Style main text elements */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     font-variant:small-caps;
 }
