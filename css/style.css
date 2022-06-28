@@ -157,7 +157,7 @@ p {
 
 /* style first paragraph on website in mobile compatible way */
 .bio {
-    margin-top: 13%;
+    margin-top: 9%;
 }
 
 .contacts{
@@ -186,11 +186,54 @@ p {
     color: var(--color-accent-2);
     margin-top: 0;
     margin-left: 10%;
-
 }
 
 .placeholder {
     margin-bottom: 150px;
+}
+
+.breakresp {
+        display: none; /* Hide BR tag for wider screens */
+}
+
+.teaching-course {
+    text-align: left;
+}
+
+.teaching-year {
+    font-weight: lighter;
+    margin-left: 20px;
+    font-size: 10pt;
+}
+
+table {
+    font-size: 11.8pt;
+    font-weight: lighter;
+    width: 85%;
+    max-width: 900pt;
+    margin-left: 5%;
+    color: var(--color-default);
+}
+
+table.colright td:nth-child(2) {
+    text-align: right;
+    width: auto;
+}
+
+table.colright tr:nth-child(1){
+   height: 35px;   /* Set only 1st row height to 15px. */
+}
+
+table.colright tr {
+    height: 45px;
+}
+
+.note {
+    font-size: 10.5pt;
+    font-weight: lighter;
+    color: var(--color-accent-2);
+    margin-top: 50px;
+    font-style: italic;
 }
 
 ul, li {
@@ -209,6 +252,11 @@ img {
     display:table-cell;
     clear: right;
     vertical-align: middle;
+}
+
+svg {
+    margin-right: 10px;
+    vertical-align: text-bottom;
 }
 
 a{
@@ -258,7 +306,7 @@ a:hover{
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: normal;
+        font-weight: lighter;
     }
 
     header {
@@ -304,6 +352,22 @@ a:hover{
     /* remove columns on about page by making them 100% wide */
     .column {
         width: 100%;
+    }
+
+    .breakresp {
+        display: inline; /* Hide BR tag for wider screens */
+    }
+
+    table.colright {
+        width: 90%;
+    }
+
+    table.colright tr {
+        height: 60px;
+    }
+
+    table.colright td {
+        vertical-align: top;
     }
 
     .img-container {

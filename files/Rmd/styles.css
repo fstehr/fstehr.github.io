@@ -1,0 +1,17 @@
+/* define a color-scheme for the entire presentation */
+
+
+h1, h2 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
