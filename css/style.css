@@ -181,6 +181,10 @@ p {
     margin-left: 10px;
 }
 
+.link.non-active {
+    color: var(--color-accent-3);
+}
+
 .abstract {
     font-size: 10.5pt;
     color: var(--color-accent-2);
