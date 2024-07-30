@@ -1,0 +1,143 @@
+---
+title: "A primer on setting up projects in R for reproducibility"
+author: "Frauke Stehr"
+date: "5/26/2022"
+output:
+  html_document:
+    theme: darkly
+    highlight: zenburn
+    toc: yes
+    toc_float: yes
+    number_sections: yes
+    citation_package: natbib
+    css: styles.css
+  pdf_document:
+    toc: yes
+bibliography: references.bib
+biblio-style: apalike
+
+
+# To DO
+# Update and fix link to knitted pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction and disclaimer
+
+During my studies, we had to submit various data-analysis assignments, but no-one ever showed us how to set up projects efficiently. My later work experience both in the industry and in research has shown me, however, just *how* important it is to set up your project efficiently from the start, so you can collaborate easily. An additional advantage is that it increases the reproducibility of your project, something that should be of clear value to any researcher, but will become important at the latest when you are submitting your paper to a journal.
+
+In this primer, I try to write down how I eventually learned to structure my data projects using projects in R, adding privacy-conform version control with git, and writing reproducible papers and slides in R Markdown. Of course, one never stops to learn, so if you have an idea on how to improve the work-flow even further, please drop me an e-mail. 
+
+*Disclaimer*: Of course, there are numerous guides for any of these steps available online. All of them are much more detailed, focusing on one specific aspect of the project management process. When I started searching for sources on how to set up projects, I felt a bit overwhelmed by the abundance of resources. Therefore I decided to write my own short primer, which is more intended to give help you have a quick start rather than getting deep understanding of all the possibilities. 
+
+# Setting up the project and folder structure
+
+## Why use R Projects and think about the folder structure?
+
+## A folder structure that works for me 
+
+# Adding version control with git/github
+
+## Why add version control?
+
+## How to synchronize your project to your github account
+
+## What about privacy, e.g., GDPR?
+
+You, your university and the people in your data set might be worried about their data being shared on github servers, if you are using personal data (in a GDPR sense). To avoid problems related to this include your data files in your `.gitignore` by including, for example, `*.csv`. 
+
+# Writing papers/slides in R Markdown 
+
+## Why write papers/slides in R Markdown?
+
+There are multiple reasons why you should want to write your reports in Markdown. First of all, you'll never have to copy and paste p-values, regression tables and graphs into your drafts again. You just calculate them in your paper. If the data changes, so does the p-value in your paper. No need to go through the paper thousand times to check that all values are the ones reflecting the current state of your analysis - nice! Second, Markdown as a syntax is designed for good *writing flow*, so all formatting goes much quicker than e.g., in LaTex or some WYSIWYG text editors. Plus, you can still use Latex's citation and math packages, so you don't need to get used to too much new syntax. 
+
+You can **knit** (in LaTex lingo *compile*) your Markdown document into many different output files. The most useful for research projects are LaTex-based pdfs (find the same document knit into a pdf here: [link](files/Rmd/projectmanagement.pdf)), and beamer slides (output as pdf) or ioslides (output as html). I currently prefer ioslides as of now, as 1) it is a widely operable file format, 2) it allows for animations using javascript, and 3) I can write all additional stylings in one .css file, keeping my Markdown script nice and tidy. 
+
+## The basic syntax
+
+### Basic text formatting
+
+Here I describe shortly some of the syntax you might want to use, mostly to show why Markdown is such an elegant syntax for writing. For a more comprehensive description, I recommend [Section 2.5]() of @xie 's RMarkdown guide. 
+
+Here are a couple of styling options you might find useful in the beginning:
+
+ - You can write in *italics* like so `*italics*`. 
+ - For **bold**-face text use two asterisks. 
+ - For both ***bold and italics*** use three asterisks. 
+ - For `in-line code` use a pair of backticks, e.g. `` `code here` ``.
+ - Headings are started by a \#. For a sub-header just add another \#.
+
+```{}
+# This is a header
+## This is a sub-header
+### This is a sub-sub-header
+
+- this is a list
+- this is a second item
+```
+
+### Including R chunks
+
+You can embed an R code chunk by typing the chunk delimiters ```` ```{r} ```` and ```` ``` ````. For example, you can print a summary of your data like this:
+
+```{r}
+summary(cars)
+```
+
+More functions are described [here](https://bookdown.org/yihui/rmarkdown/r-code.html#r-code).
+
+### Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+### Including citations with bibtex
+
+If you are used to manage citations in bibtex, you'll be happy to hear that this is also possible in Markdown. Include a `references.bib` file in the folder that contains the Markdown file.
+In your preamble  include the following
+```{}
+output:
+  html_document:
+    citation_package: natbib
+    
+bibliography: references.bib
+biblio-style: apalike
+```
+You can then include citations like so `@xie` or `[@xie]` which renders to @xie and [@xie], respectively. 
+
+
+# Additional sources
+
+The book [An Introduction to R](https://intro2r.com/) provides a detailed guide for setting up your R projects [@intro2r].
+
+How to set up an R project
+<https://intro2r.com/rsprojs.html>
+<https://r4ds.had.co.nz/workflow-projects.html#rstudio-projects>
+
+Github integration
+<https://intro2r.com/github_r.html>
+
+Rmarkdown setup
+<https://intro2r.com/rmarkdown_r.html> 
+
+Installing rmarkdown
+<https://intro2r.com/mac-osx.html>
+
+RMarkdown workflow
+<https://r4ds.had.co.nz/r-markdown-workflow.html#r-markdown-workflow>
+
+
+
+
+# References
+
