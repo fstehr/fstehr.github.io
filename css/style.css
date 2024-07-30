@@ -157,7 +157,7 @@ p {
 
 /* style first paragraph on website in mobile compatible way */
 .bio {
-    margin-top: 7%;
+    margin-top: 10%;
 }
 
 .contacts{
@@ -258,7 +258,7 @@ img {
     width: 70%;
     margin-left: 15%;
     margin-right: 5%;
-    margin-top: 13%;
+    margin-top: 6%;
     display:table-cell;
     clear: right;
     vertical-align: middle;
