@@ -31,3 +31,13 @@ darkmodetoggle.addEventListener("click", function () {
         sessionStorage.lightMode = "dark";
     }
 });
+
+
+/* mobile menu button */
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+  const menu = document.querySelector('.menu');
+
+  hamburgerBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });

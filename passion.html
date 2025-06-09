@@ -13,7 +13,7 @@
     <meta name="twitter:creator" content="@FraukeStehr">
     <link href="https://fonts.cdnfonts.com/css/neutraface-text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/newstyles.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Passions | Frauke Stehr</title>
 </head>
 
@@ -21,20 +21,26 @@
 
 <body>
     <div class="container">
-            <!-- The navigation section -->
-            <nav>
-                <h1>Frauke Stehr</h1>
-                <ul>
-                    <li><a href="/new_index.html">About Me</a></li>
-                    <li><a href="/newresearch.html">Research</a></li>
-                    <li><a class="active"  href="#">Things I am passionate about</a></li>
-                    <li><a href="/reading.html">Things I am reading</a></li>
-                    <li><a href="mailto:hello@fraukestehr.eu?subject=Coffee Chat Request&body=Hi,%0D%0A%0D%0AWho are you? What would you like to chat about?%0D%0A%0D%0ALooking forward to hearing from you!" style="text-decoration: none;">
-                        Meet me for coffee</a></li>    </ul>
+            <!-- Hamburger Button -->
+            <button id="hamburger-btn" class="hamburger">&#9776;</button>
 
-                <!--- Dark mode button --->
-                <div id="DarkModeToggle" class="dark-mode-toggle">
-                    <img class="icon-btn" src="/img/darkmode.svg" alt="darkmode">
+            <!-- The navigation section -->
+            <nav id="main-nav">
+                <h1><a href="/index.html">Frauke Stehr</a></h1>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="/index.html">About Me</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a class="active"  href="#">Things I am passionate about</a></li>
+                        <li><a href="/reading.html">Things I am reading</a></li>
+                        <li><a href="mailto:hello@fraukestehr.eu?subject=Coffee Chat Request&body=Hi,%0D%0A%0D%0AWho are you? What would you like to chat about?%0D%0A%0D%0ALooking forward to hearing from you!" style="text-decoration: none;">
+                            Meet me for coffee</a></li>    </ul>
+
+                    <!--- Dark mode button --->
+                    <div id="DarkModeToggle" class="dark-mode-toggle">
+                        <img class="icon-btn" src="/img/darkmode.svg" alt="darkmode">
+                    </div>
                 </div>
             </nav>
 
@@ -43,71 +49,91 @@
             <main>
                 <div class="content">
 
-                    <h3> Increasing people’s agency & aspiration</h3>
-                    
-                        <p>
-                            <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
-                            </ul>
-                        </p>
+                    <div class="mobile-header">
+                        <h2 class="current-page-title">Things I am <br>passionate about</h2>
+                    </div>
 
-
-                    <h3>Trying to do good more effectively </h3>
+                    <h3>Trying to Do Good More Effectively</h3>
 
                         <p>
-                            We often strive to do good things, but are often neglect areas where our doing good
-                            could have much more impact. I am not entirely a convinced effective altruist, but I find
-                            a couple of their chore considerations quite helpful in thinking about my donations:
-                            (1) we have little intuitive feeling for the variation in impact across charities,
-                            (2) it makes sense to 'think on the margin' (i.e. like an economist) about impact, reflecting
-                            where can my donation move the needle the most?
-
-                            I found the first two chapters of the effective altruism handbook a good introduction
+                            We often strive to do good things, but often neglect areas where our doing good could have a much greater impact.
+                            I am not a radical Effective Altruist, but I find some of their core considerations quite helpful
+                            in thinking about my donations: (1) we have little intuitive feeling for the variation in impact across charities;
+                            (2) it makes sense to “think on the margin” (i.e., like an economist) about impact – asking, where can my donation
+                            move the needle the most? I found the first two chapters of the Effective Altruism Handbook a good introduction
                             to start thinking about this.
-
+                        </p>
                             <ul class="list">
                                 <li><a href="https://forum.effectivealtruism.org/s/B79ro5zkhndbBKRRX" target="_blank" rel="noopener noreferrer">Chapter 1 - The Effectiveness Mindset</a></li>
                                 <li><a href="https://forum.effectivealtruism.org/s/x3KXkiAQ6NH8WLbkW" target="_blank" rel="noopener noreferrer">Chapter 2 - Differences in Impact</a></li>
                             </ul>
+
+                    <h3>Innovation for the Social Good</h3>
+
+                        <p>Lots of progress for vulnerable groups is held back by a lack of innovation, often because
+                            innovators don't see the business case. To me, this is where economists with an inclination for
+                            both theory and data can come into play. They can focus on carefully designing innovation
+                            financing tools that address these market failures. I like this design-thinking work, at the intersection between research and policy,
+                            which is sometimes called market shaping. Using economists' tools to make the world a better
+                            place brings together everything I care about, and is something we should pursue much more actively.
                         </p>
-
-                    <h3>Innovation for the social good</h3>
-
-                        <p>
                             <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
+                                <li>A non-technical <a href="https://www.youtube.com/watch?v=q9DHzUQzA0U" target="_blank" rel="noopener noreferrer">introduction lecture</a> on why we need innovation to fight poverty</li>
+                                <li>Rachel Glennerster on the 80,000 hours podcast: <a href="https://www.youtube.com/watch?v=e1gwXnKcbsM" target="_blank" rel="noopener noreferrer">How “market shaping” could help solve pandemics, climate change, and more</a></li>
+                                <li>The University of Chicago <a href="https://marketshaping.uchicago.edu" target="_blank" rel="noopener noreferrer">Market-Shaping Accelerator</a> designs innovation contests and explains the economics background of different market shaping tools</li>
+                                <li><a href="https://worksinprogress.co/issue/how-to-start-an-advance-market-commitment/" target="_blank" rel="noopener noreferrer">How to start an advance market commitment</a>: Practical account of setting up an AMC for carbon removal</li>
                             </ul>
+
+
+                    <h3>Increasing People’s Agency & Aspirations</h3>
+
+                        <p>One bottleneck for talent utilization that I've become increasingly aware of through my teaching
+                            and mentoring of students is a lack of confidence and perceived agency. I have decidedly become
+                            an optimist and try to enable others to think similarly – raising their aspirations and agency,
+                            showing them that one can often simply take action. I mostly like it because it is fun to support
+                            others in pursuing their passions, but it is also a very scalable meta-skill. Related readings include:
                         </p>
-
-                    <h3>Human-centered architecture</h3>
-
-                        <p>
                             <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
+                                <li>Tyler Cowen on supporting talents –
+                                    <a href="https://substack.com/@chinatalk/note/c-122553065?utm_source=notes-share-action&r=2xljce" target="_blank" rel="noopener noreferrer">Encouragement is often more important than money</a>
+                                </li>
+                                <li>Cate Hall on <a href="https://usefulfictions.substack.com/p/how-to-be-more-agentic" target="_blank" rel="noopener noreferrer">How to be More Agentic</a></li>
                             </ul>
+
+
+                    <h3>Human-centered Architecture</h3>
+
+                        <p>Affordable housing is a big problem in the western world. We are still not building
+                            enough, and more importantly, we're often building badly. I believe good architecture and
+                            urban planning should put people and their needs at the center. They should not only aim for
+                            affordability, but also aesthetic quality and fostering joyful human interaction.
+                            Scandinavian functionalist design masters this skillfully, and I love its aesthetic – natural light,
+                            organic shapes, and the use of local materials, especially plain wood. There are plenty of examples showing
+                            that practicality and beauty don’t have to be in conflict, and they should inspire how we build today.
+                            Here are some recommendations:
                         </p>
-
-                    <h3>Efficient & replicable workflows</h3>
-
-                        <p>
                             <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
+                                <li>Examples of Scandinavian functionalist architecture:
+                                    watch the <a href="https://tv.apple.com/us/movie/aalto/umc.cmc.1z6qczdvnzkone70xlwi8jejz?playableId=tvs.sbd.9001%3A1585670779" target="_blank" rel="noopener noreferrer">Aalto movie</a>,
+                                    visit <a href="https://www.cfmoller.com/p/Aarhus-Universitet-i232.html" target="_blank" rel="noopener noreferrer">Aarhus University</a>, or the
+                                    <a href="https://vilhelmlauritzen.com/project/radiohouse" target="_blank" rel="noopener noreferrer">the Radio House in Copenhagen</a></li>
+                                <li>Urban design that invites public life: Explore
+                                    <a href="https://www.visitcopenhagen.com/copenhagen/planning/superkilen-park-gdk707822" target="_blank" rel="noopener noreferrer">Superkilen in Nørrebro</a> (Cph),
+                                    and the <a href="https://www.dezeen.com/2022/12/06/copenhagen-harbour-development-denmark/" target="_blank" rel="noopener noreferrer">Copenhagen harbour front</a></li>
+                                <li>Notable social housing projects: Tour the <a href="https://world-heritage-estates-berlin.com/estates/" target="_blank" rel="noopener noreferrer">UNESCO-listed Social Housing Estates in Berlin</a>
+                                    from the Neues Bauen era. I particularly like the colorful Bruno Taut buildings.</li>
                             </ul>
+
+
+                    <h3>Living Well in a Tech-Filled World</h3>
+
+                        <p>I like to be intentional about how I spend my time: I don’t have social media apps on my phone,
+                            and I try to streamline my algorithms to prioritize economics research discussions, content
+                            that helps me learn new things, and wholesome human interactions :) I also like to write by hand (paper or ipad);
+                            it helps clarify my thinking, and I strongly believe it strengthens the connection between
+                            writing and memory. Outside of work, I enjoy everything related to arts and culture – going to
+                            concerts, visiting museums, biking, and traveling by train.
                         </p>
-
-                    <h3>Enhancing what makes us human in a technology-filled world</h3>
-
-                        <p>
-                            <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
-                            </ul>
-                        </p>
-
 
                 </div>
             </main>

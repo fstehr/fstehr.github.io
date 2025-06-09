@@ -1,11 +1,10 @@
-/* set color scheme */
-:root[color-mode="dark"] {
-    --color-background: #22252b; /*#262626*/
-    --color-default: #cccccc;
-    --color-accent-1: #6695dc; /* #89a1c4*/
-    --color-accent-2: #AAB2BB;
-    --color-accent-3: #6c85ab;
-    --border-color: #e6e9eb;
+:root {
+    --color-background: #F2F2F2;
+    --color-default: #262626;
+    --color-accent-1: #4b7bc4;
+    --color-accent-2: dimgrey;
+    --color-accent-3: #385e96;
+    --border-color: #3A3A3A;
 }
 
 :root[color-mode="light"] {
@@ -17,48 +16,124 @@
     --border-color: #3A3A3A;
 }
 
-/* style main elements */
+:root[color-mode="dark"] {
+    --color-background: #262626; /*#262626*/
+    --color-default: #cccccc;
+    --color-accent-1: #5981d1; /* #89a1c4*/
+    --color-accent-2: #AAB2BB;
+    --color-accent-3: #3b60aa;
+    --border-color: #e6e9eb;
+}
+
+/* automatically read preferred color scheme */
+/* @media (prefers-color-scheme: dark) {
+    html {
+        color-mode: dark;
+      }
+}
+ */
+
+:root {
+    --navbar-width: 253px;
+    --fontsize-normal: 13pt;
+}
+
+/* reset margins for everything to zero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     color:var(--color-default);
     background-color:var(--color-background);
-    font-family: 'Open Sans', sans-serif; /* InaiMathi */
-    font-size: 13px;
+    font-family: 'Crimson Pro', serif; /* InaiMathi */
+    font-size: 1em;
+    /*   display: flex;
+    min-height: 100vh; */
 }
 
-section{
-    padding-top: 20px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
+.container {
+  display: flex;
 }
 
-
-div{
-    margin: auto;
-    line-height: 1.6;
-    max-width: 900px;
+.content {
+    max-width: 1000px;
 }
 
-/* Style website header */
-header{
-    background-color: var(--color-background);
-    width: 100%;
-    height: 150px;
+/* style the navigation bar */
+nav {
+    width: var(--navbar-width);
+    padding: 2rem 1rem;
+    margin-left: 1em;
     position: fixed;
-    vertical-align: middle;
-    display: inline-block;
-    text-align: center;
+    top: 0;
     left: 0;
-    top:  0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+nav h1 {
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+nav h1 a {
+    all: unset;
+    color: inherit;
+    font: inherit;
+    text-decoration: none; /* Or `inherit`, depending on your design */
+}
+
+nav h1 a:hover {
+    text-decoration: none; /* Or `inherit`, depending on your design */
+    border-bottom: none;
+    cursor: pointer; /* optional: makes it still feel like a link */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Navigation links */
+nav a {
+    color: var(--color-accent-2);
+    font-family: 'Neutraface Text', sans-serif;
+    font-weight: lighter;
+    font-variant:small-caps;
+    text-decoration: none;
+    font-size: 1.7em;
+}
+
+/* Style the current/active link */
+nav a.active {
+    color: var(--color-default);
+    border-bottom: 1px solid var(--color-accent-1);
+    padding-bottom: 1px;
+}
+
+nav a:hover {
+    border-bottom: 1px solid var(--color-default);
+    padding-bottom: 1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%; /* important for margin-top: auto to work */
+}
 
 /* style darkmode button */
 .dark-mode-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
+    margin-top: auto; /* pushes it to the bottom */
+    padding-top: 2rem;
 }
 
 .icon-btn {
@@ -70,81 +145,37 @@ header{
 }
 
 
-/* Style the navigation menu */
-.sticky-wrapper {
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--color-background);
-    position: sticky;
-    top: 0;
-    z-index: 13;
-}
-
-.navbar {
-    width: 80%;
-    background-color: var(--color-background);
-    overflow: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Navigation links */
-.navbar a {
-    float: left;
-    padding: 12px;
-    color: var(--color-accent-2);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: lighter;
-    width: 21.5%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    text-align: center;
-}
 
 
-/* Style the current/active link */
-.navbar a.active {
-    color: var(--color-default);
-}
 
-.row {
-    margin-left: 2%;
-    margin-right: 2%;
-}
+/* style main section of the page */
 
-/* style text in two columns */
-.column {
-    float: left;
-    width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+main {
+    margin-left: var(--navbar-width);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+    padding: 3rem 4rem;
 }
 
 /* Style main text elements */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Neutraface Text', sans-serif;
     font-weight: lighter;
     font-variant:small-caps;
-}
-
-h1{
-    text-align: center;
-    font-size: 32px;
+    font-size: 2em;
 }
 
 h3{
-    margin-top: 25px;
-    font-size:20px;
+    margin-top: 0.8em;
+
 }
 
-p {
-    font-size: 11.8pt;
+p, .list {
+    font-size: 14pt;
     font-weight: lighter;
-    max-width: 900px;
+    max-width: 950px;
     text-align: justify;
     justify-content: center;
     margin-left: 5%;
@@ -152,120 +183,12 @@ p {
     display: block;
     line-height: 1.4;
     color: var(--color-default);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
-/* style first paragraph on website in mobile compatible way */
-.bio {
-    margin-top: 10%;
-}
-
-.contacts{
-    margin-top: 10%;
-}
-
-/* style other paragraph elements */
-.papertitle{
-    font-style: italic;
-}
-
-.coauthors {
-    color: var(--color-accent-2);
-    font-size: 10.5pt;
-    margin-top: 0;
-}
-
-.publicationstatus {
-    font-style: italic;
-    color: var(--color-accent-2);
-    font-size: 10.5pt;
-}
-
-.link {
-    font-size: 10.5pt;
-    margin-top: 0;
-    margin-left: 10px;
-}
-
-.link.non-active {
-    color: var(--color-accent-3);
-}
-
-.abstract {
-    font-size: 10.5pt;
-    color: var(--color-accent-2);
-    margin-top: 0;
-    margin-left: 10%;
-}
-
-.placeholder {
-    margin-bottom: 150px;
-}
-
-.breakresp {
-        display: none; /* Hide BR tag for wider screens */
-}
-
-.teaching-course {
-    text-align: left;
-}
-
-.teaching-year {
-    font-weight: lighter;
-    margin-left: 20px;
-    font-size: 10pt;
-}
-
-table {
-    font-size: 11.8pt;
-    font-weight: lighter;
-    width: 85%;
-    max-width: 900pt;
-    margin-left: 5%;
-    color: var(--color-default);
-}
-
-table.colright td:nth-child(2) {
-    text-align: right;
-    width: auto;
-}
-
-table.colright tr:nth-child(1){
-   height: 35px;   /* Set only 1st row height to 15px. */
-}
-
-table.colright tr {
-    height: 45px;
-}
-
-.note {
-    font-size: 10.5pt;
-    font-weight: lighter;
-    color: var(--color-accent-2);
-    margin-top: 50px;
-    font-style: italic;
-}
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    border: 0;
-}
-
-
-img {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 5%;
-    margin-top: 6%;
-    display:table-cell;
-    clear: right;
-    vertical-align: middle;
-}
-
-svg {
-    margin-right: 10px;
-    vertical-align: text-bottom;
+.list {
+    margin-left: 7em;
 }
 
 a {
@@ -273,9 +196,92 @@ a {
     color: var(--color-accent-1);
 }
 
-a:hover{
+main a:hover{
     text-decoration: none;
     color: var(--color-accent-3);
+}
+
+
+
+
+/* style first paragraph on website in mobile compatible way */
+.bio {
+    margin-top: 1.4em;
+}
+
+.contacts{
+    margin-top: 7%;
+}
+
+/* style other paragraph elements */
+.pubinfo {
+    margin-top: 0;
+    margin-left: 3.5em;
+}
+
+.papertitle{
+    font-style: italic;
+}
+
+.coauthors {
+    color: var(--color-accent-2);
+    font-size: var(--fontsize-normal);
+    margin-top: 0;
+   /* margin-left: 15px; */
+}
+
+.publicationstatus {
+    font-style: italic;
+    color: var(--color-accent-2);
+    font-size: var(--fontsize-normal);
+    /*margin-left: 15px;*/
+}
+
+.publicationdata {
+    color: var(--color-accent-2);
+    font-size: var(--fontsize-normal);
+    margin-left: 5px;
+}
+
+.abstract {
+    font-size: var(--fontsize-normal);
+    color: var(--color-accent-2);
+    margin-top: 0;
+    margin-left: 10%;
+}
+
+.link {
+    font-size: var(--fontsize-normal);
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.link.non-active {
+    color: var(--color-accent-3);
+}
+
+.reference {
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+.description {
+    margin-left: 4em;
+}
+
+
+img.profile {
+    float: right;
+    width: 300px; /* or your desired width */
+    height: auto;
+    margin-top: 1.8em;
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+}
+
+svg {
+    margin-right: 10px;
+    vertical-align: text-bottom;
 }
 
 
@@ -293,102 +299,140 @@ a:hover{
 }
 
 #disclaimer {
+    max-width: none;
     text-align: right;
     font-size: 10pt;
 }
 
-/* style div section element */
-#section {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 150px;
+
+
+
+
+/* Make Site Mobile Friendly */
+
+/* Hide hamburger on desktop, show on mobile */
+#hamburger-btn {
+  display: none;
+  position: fixed;
+  top: .4rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-accent-2);
+  z-index: 999;
 }
 
+.current-page-title {
+    display: none;
+}
 
+/* Mobile styles */
+@media (max-width: 768px) {
+      nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          padding: 1rem;
+          background: var(--color-background); /* use your existing background variable */
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 998;
+      }
 
-
-/* mobile styles */
-@media all and (max-width: 800px){
-    div {
-       margin-left: 2.5%;
-       margin-right: 2.5%;
+    nav h1 {
+        margin: 0;
+        font-size: 1.5em;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: lighter;
+
+    #hamburger-btn {
+        display: block;
     }
 
-    header {
-        height: 80px;
-        margin-left: auto;
-        margin-right: auto;
+    .menu {
+        display: none;
+        background: var(--color-background);
+        flex-direction: column;
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1.3em;
     }
 
     .dark-mode-toggle {
+        margin-top: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    main {
         margin-left: 0;
-        margin-right: 0;
+        padding: 3rem 3rem;
+        margin-top: 0em; /* optional: adjust for mobile spacing */
     }
 
-    .sticky-wrapper {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+    .content {
+        max-width: 100%;
     }
 
-    .navbar {
-        width: 95%;
-        background-color: var(--color-background);
-        overflow: auto;
+
+    /* adjusting font sizes and spacing for mobile */
+    h1  {
+        font-size: 1.6em;
     }
 
-    .navbar a {
-        width: 25%;
+    h3 {
+        font-size: 1.6em;
+        margin-top: 1.5em;
+    }
+
+    .list {
+        margin-left: 2.5em;
+        text-align: left;
+        font-size: var(--fontsize-normal);
+    }
+
+    .mobile-header{
         text-align: center;
-        font-size: 10pt;
-        font-weight: normal;
-        padding-left: 0;
-        padding-right: 0;
     }
 
-    /* change order of picture and text by making row a flex item and reversing the column orders */
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column-reverse;  /* revert vertically */
-    }
-
-    /* remove columns on about page by making them 100% wide */
-    .column {
-        width: 100%;
-    }
-
-    .breakresp {
-        display: inline; /* Hide BR tag for wider screens */
-    }
-
-    table.colright {
-        width: 90%;
-    }
-
-    table.colright tr {
-        height: 60px;
-    }
-
-    table.colright td {
-        vertical-align: top;
+    .current-page-title {
+        display: inline-block;
+        margin-top: 2em;
+        color: var(--color-default);
+        border-bottom: 1px solid var(--color-accent-1);
+        padding-bottom: 1px;
     }
 
     .img-container {
         width: 250px;
         height: 250px;
         overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 7%;
+        margin: 3em auto 7%;
     }
 
-    img {
+    img.profile {
         object-fit: cover;
         width: 100%;
         margin-left: auto;
@@ -398,63 +442,26 @@ a:hover{
     }
 
     p {
-        font-size: 11.8pt;
-        line-height: 1.4;
-        font-weight: normal;
+        font-size: var(--fontsize-normal);
     }
 
-    .bio {
+    .reference {
+        font-size: 1.1em;
+    }
+
+    :root {
+        --fontsize-normal: 12pt;
+    }
+
+    .description {
+        margin-left: 2em;
+    }
+
+    .pubinfo {
         margin-top: 0;
-    }
-
-    .footer {
-        position: relative;
-        margin-top: 50px;
+        margin-left: 2em;
     }
 
 }
-
-@media all and (max-width: 900px) {
-    .navbar a {
-        width: 25%;
-        text-align: center;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-
-
-/* for large screens */
-@media all and  (min-width: 1700px){
-    body{
-        font-size:16px;
-    }
-
-    h1{
-        font-size: 50px;
-    }
-
-    h3{
-        font-size:25px;
-    }
-
-    header{
-        font-size: 20px;
-        height: 260px;
-    }
-
-    div{
-        max-width:1000px;
-    }
-
-    img {
-        width: 300px;
-        height: 420px;
-        max-width: 300px;
-    }
-}
-
-
 
 

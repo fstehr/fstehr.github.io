@@ -13,7 +13,7 @@
     <meta name="twitter:creator" content="@FraukeStehr">
     <link href="https://fonts.cdnfonts.com/css/neutraface-text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/newstyles.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Reading | Frauke Stehr</title>
 </head>
 
@@ -21,20 +21,26 @@
 
 <body>
     <div class="container">
-            <!-- The navigation section -->
-            <nav>
-                <h1>Frauke Stehr</h1>
-                <ul>
-                    <li><a href="/new_index.html">About Me</a></li>
-                    <li><a href="/newresearch.html">Research</a></li>
-                    <li><a href="#">Things I am passionate about</a></li>
-                    <li><a class="active" href="/">Things I am reading</a></li>
-                    <li><a href="mailto:hello@fraukestehr.eu?subject=Coffee Chat Request&body=Hi,%0D%0A%0D%0AWho are you? What would you like to chat about?%0D%0A%0D%0ALooking forward to hearing from you!" style="text-decoration: none;">
-                        Meet me for coffee </a></li>    </ul>
+            <!-- Hamburger Button -->
+            <button id="hamburger-btn" class="hamburger">&#9776;</button>
 
-                <!--- Dark mode button --->
-                <div id="DarkModeToggle" class="dark-mode-toggle">
-                    <img class="icon-btn" src="/img/darkmode.svg" alt="darkmode">
+            <!-- The navigation section -->
+            <nav id="main-nav">
+                <h1><a href="/index.html">Frauke Stehr</a></h1>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="/index.html">About Me</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/passion.html">Things I am passionate about</a></li>
+                        <li><a class="active" href="/">Things I am reading</a></li>
+                        <li><a href="mailto:hello@fraukestehr.eu?subject=Coffee Chat Request&body=Hi,%0D%0A%0D%0AWho are you? What would you like to chat about?%0D%0A%0D%0ALooking forward to hearing from you!" style="text-decoration: none;">
+                            Meet me for coffee </a></li>    </ul>
+
+                    <!--- Dark mode button --->
+                    <div id="DarkModeToggle" class="dark-mode-toggle">
+                        <img class="icon-btn" src="/img/darkmode.svg" alt="darkmode">
+                    </div>
                 </div>
             </nav>
 
@@ -43,29 +49,139 @@
             <main>
                 <div class="content">
 
-                    <h3> (Online) Magazines</h3>
+                    <div class="mobile-header">
+                        <h2 class="current-page-title">Things I am reading</h2>
+                    </div>
 
-                        <p>
-                            <ul class="list">
-                                <li>Works in Progress</li>
-                                <li>The New Atlantis Magazine - Series on "How the System Works"</li>
-                            </ul>
+                    <h3>Online Magazines</h3>
+
+                        <p class="reference">
+                            <a href="https://worksinprogress.co" target="_blank" rel="noopener noreferrer">Works in Progress</a><br>
                         </p>
+                            <p class="description">My favorite magazine. They have long-read articles on almost anything you can imagine.
+                                It's one of the core outlets of the progress studies movement,
+                                which tries to understand the barriers to progress and how to overcome them.
+                                Make sure to also subscribe to their newsletter, in which they share shorter reads. Articles span:
+                            </p>
+                                <ul class="list">
+                                    <li><a href="https://worksinprogress.co/issue/how-polyester-bounced-back/" target="_blank" rel="noopener noreferrer">History of innovation</a> (e.g., polyester)</li>
+                                    <li><a href="https://worksinprogress.co/issue/the-bad-science-behind-expensive-nuclear/" target="_blank" rel="noopener noreferrer">Examples of how specific regulations came about</a></li>
+                                    <li><a href="https://worksinprogress.co/issue/developing-the-science-of-science/" target="_blank" rel="noopener noreferrer">How to design better science systems</a></li>
+                                    <li><a href="https://worksinprogress.co/issue/the-housing-theory-of-everything/" target="_blank" rel="noopener noreferrer">Housing policy</a></li>
+                                    <li><a href="https://worksinprogress.co/issue/against-the-survival-of-the-prettiest/" target="_blank" rel="noopener noreferrer">Why contemporary architecture is often so ugly</a></li>
+                                </ul>
+
+                        <p class="reference">
+                            <a href="https://www.thenewatlantis.com/" target="_blank" rel="noopener noreferrer">The New Atlantis Magazine</a><br>
+                        </p>
+                            <p class="description">
+                                Specifically, their new series on <a href="https://www.thenewatlantis.com/collections/how-the-system-works" target="_blank" rel="noopener noreferrer">"How the System Works"</a>,
+                                with articles explaining the systems supporting our modern, luxurious living standards, and how they came about. The first two articles  focus on agriculture and clean water systems.
+                            </p>
 
 
                     <h3>Newsletters</h3>
 
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <p class="reference">
+                            <a href="https://blog.spec.tech" target="_blank" rel="noopener noreferrer">Speculative Technologies Blog</a>
+                        </p>
+                            <p class="description">Blog by Ben Reinhardt, the founder of a <a href="https://spec.tech/" target="_blank" rel="noopener noreferrer">nonprofit industrial research lab</a>
+                                for the public good. Topics are materials science innovation, and the institutional barriers to more and better innovation
+                                — especially the limitations of the current university system for supporting all forms of technological progress.
+                                My favorite articles include
+                            </p>
+                                <ul class="list">
+                                     <li>
+                                        <a href="https://www.unbundle-the-university.com/" target="_blank" rel="noopener noreferrer">Unbundling the university</a>
+                                         – An extensive essay on the plethora of roles universities have accumulated over time, and how this monopoly position may
+                                         not be optimal for society.
+                                    </li>
+                                    <li>
+                                        <a href="https://blog.spec.tech/p/what-does-it-mean-for-a-technology" target="_blank" rel="noopener noreferrer">What does it mean for a technology to scale?</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://blog.spec.tech/p/is-necessity-actually-the-mother" target="_blank" rel="noopener noreferrer">Is necessity actually the mother of invention?</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://worksinprogress.co/issue/getting-materials-out-of-the-lab/" target="_blank" rel="noopener noreferrer">Getting materials out of the lab</a> – published in  Works in Progress magazine</li>
+                                 </ul>
+
+                        <p class="reference"><a href="https://www.vox.com/" target="_blank" rel="noopener noreferrer">Vox News</a> – Topic Newsletters</p>
+
+                            <p class="description">
+                                <a href="https://www.vox.com/future-perfect" target="_blank" rel="noopener noreferrer">Future Perfect</a> – A newsletter focused on Effective Altruism–adjacent topics,
+                                including AI safety, development economics, global health, and climate change.
+                                Recently, it has featured many articles about AI risks and governance.
+                            </p>
+                            <p class="description">
+                                <a href="https://www.vox.com/your-mileage-may-vary-advice-column" target="_blank" rel="noopener noreferrer">Your mileage may vary</a> –
+                                An advice column addressing ethical questions, often through the lens of moral philosophy, showing how different philosophical frameworks might approach the same dilemma.
+                            </p>
+
+                        <p class="reference">
+                            <a href="https://ourworldindata.org" target="_blank" rel="noopener noreferrer">Our World in Data</a> – Biweekly Digest
+                        </p>
+                            <p class="description">
+                                Biweekly newsletter featuring a selection of visualizations and short explainers from the team.
+                                Great for expanding your perspective into topics you may know little about — in my case, global health.
+                            </p>
+
+                        <p class="reference">
+                            <a href="https://flowingdata.com/" target="_blank" rel="noopener noreferrer">Flowing Data</a> – Weekly Digest
+                        </p>
+                            <p class="description">Data visualization newsletter showcasing recent highlights from Nathan Yau’s blog.
+                                Sometimes you learn something completely unexpected—e.g.,
+                                <a href="https://flowingdata.com/2025/05/08/met-gala-dress-silhouettes-over-the-years/" target="_blank" rel="noopener noreferrer">how the silhouettes of Met Fala dresses have evolved</a>.
+                            </p>
+
+                        <p class="reference">
+                            <a href="https://themarkup.org/" target="_blank" rel="noopener noreferrer">The Markup</a> – Hello World Newsletter
+                        </p>
+                            <p class="description">Semi-regular newsletter by investigative journalists examining how powerful institutions use technology,
+                                with a focus on accountability and digital rights. Topics include the misuse of algorithms by public authorities and the
+                                proliferation of third-party tracking tools.
+                            </p>
 
                     <h3>Books</h3>
 
-                        <ul>
-                            <li></li>
-                            <li></li>
+                            <p class="description">I mostly prefer to read novels, but once in a while, a non-fiction book
+                                captures my attention. The list below includes books I’ve read recently that touched me in
+                                some way and expanded my horizons (in no particular order). If you have any book recommendations
+                                based on this list, please get in touch!</p>
+
+                            <ul class="list">
+                                <li>Hannah Ritchie: <em>Not the End of the World: How We Can Be the First Generation to Build a Sustainable Planet</em> – An optimistic outlook on all the things we have achieved already in fighting climate change and how we can achieve even more.</li>
+                                <li>All books by Florian Illies – A German art historian with an excellent writing style; his books read like novels.
+                                    I especially enjoyed <em>1913: The Year Before the Storm</em>, and <em>Love in a Time of Hate: Art and Passion in the Shadow of War</em>.</li>
+                                <li>James Baldwin – To me, he is one of the greatest writers and observers of human nature. His prose is both direct and poetic. I especially enjoyed <em>Another Country</em>, and <em>Giovanni's room</em>.</li>
+                                <li> Gabriele Tergit's <em>Effingers</em> – The story of a Jewish dynasty’s rise and fall in Berlin, beginning with the rush of the Gründerzeit period and ending tragically after WWII. A compelling account of lived experiences, family dynamics across generations, and their intersection with political tides.</li>
+                                <li>Grit Lemke <em>Kinder von Hoy</em> – A vivid depiction of growing up in a small industrial town in GDR.</li>
+                            </ul>
+
+                    <h3>Knowledge Resources</h3>
+
+
+                        <ul class="list">
+                            <li>
+                                <a href="https://www.newthingsunderthesun.com">New Things Under The Sun</a> – A living literature review of innovation research from across disciplines, maintained by Matt Clancy.
+                            </li>
+                            <li>
+                                <a href="https://www.monash.edu/msdi/research/good-questions-review">Good Questions Review</a> – A living literature review of social science research, produced by Paul Kellner.
+                            </li>
+                            <li>
+                                <a href="https://www.econgraphs.org">EconGraphs</a> – An interactive site for exploring economic models with customizable graphs, created by Chris Makler.
+                            </li>
+                            <li>
+                                <a href="https://www.nickchk.com/causalgraphs.html">Causal Graphs</a> – An animated introduction to causal inference tools, explained by Nick Huntington-Klein.
+                            </li>
+                            <li>
+                                <a href="https://polarsci.github.io/power_simulation_guide/">Power Simulation</a> – A practical guide to power analysis using simulation in Stata, written by Pol Campos-Mercade.
+                            </li>
+                            <li>
+                                <a href="https://seeing-theory.brown.edu">Seeing Theory</a> – A visually rich and interactive introduction to probability and (Bayesian) statistics, developed by Daniel Kunin.
+                            </li>
                         </ul>
+
                 </div>
             </main>
 
