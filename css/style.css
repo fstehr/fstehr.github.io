@@ -144,7 +144,18 @@ nav a:hover {
     cursor: pointer;
 }
 
+.alert {
+    display: block;
+    background-color: color-mix(in srgb, var(--color-background), var(--color-default) 8%);
+    border: none;
+    border-radius: 8px;
+    padding: .2rem .2rem;
+    margin: 1.5rem 0;
+}
 
+.alert * {
+    background-color: transparent;
+}
 
 /* style main section of the page */
 
